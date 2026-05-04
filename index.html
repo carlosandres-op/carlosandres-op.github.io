@@ -7,16 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Aplicación de banner background.png con ajuste de estilo */
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('realistic_background.png');
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('banner background.png');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed; /* Efecto Parallax sutil */
         }
         .clover-card:hover {
             transform: translateY(-5px);
             border-color: #10b981;
         }
-        /* Estilo para que los logos de clientes se vean profesionales */
         .client-logo {
             filter: grayscale(100%);
             opacity: 0.7;
@@ -31,6 +32,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
 
+    <!-- Navbar -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
@@ -46,17 +48,23 @@
         </div>
     </nav>
 
+    <!-- Hero Section con banner background.png -->
     <header class="hero-bg h-[85vh] flex items-center text-white text-center px-6">
         <div class="container mx-auto max-w-4xl">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Impulsamos tu Éxito con Tecnología de Vanguardia</h1>
-            <p class="text-lg md:text-xl mb-8 text-slate-200">Llevamos la Transformación Digital a cada rincón de tu empresa con soluciones inteligentes y procesos optimizados.</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight tracking-tight">
+                Impulsamos tu Éxito con Tecnología de Vanguardia
+            </h1>
+            <p class="text-lg md:text-xl mb-8 text-slate-200 font-light">
+                Llevamos la Transformación Digital a cada rincón de tu empresa con soluciones inteligentes y procesos optimizados.
+            </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
                 <a href="#servicios" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-full font-semibold transition text-lg shadow-lg shadow-emerald-900/20">Nuestros Servicios</a>
-                <a href="https://wa.me/593979267019" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 px-8 py-3 rounded-full font-semibold transition text-lg">Contactar Ahora</a>
+                <a href="https://wa.me/593979267019" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 px-8 py-3 rounded-full font-semibold transition text-lg">Agendar Cita</a>
             </div>
         </div>
     </header>
 
+    <!-- Services Section -->
     <section id="servicios" class="py-20 bg-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Soluciones Integrales</h2>
@@ -87,6 +95,7 @@
         </div>
     </section>
 
+    <!-- Clients Section -->
     <section id="clientes" class="py-20 bg-slate-50">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Empresas que confían en nosotros</h2>
@@ -105,40 +114,22 @@
                     </div>
                     <span class="text-sm font-semibold text-slate-400 uppercase tracking-widest">Trataguas Cia. Ltda.</span>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section class="py-10 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="bg-slate-900 text-white rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between shadow-2xl">
-                <div class="text-left md:w-2/3">
-                    <h3 class="text-2xl font-bold mb-4">Soluciones Verticales Especializadas</h3>
-                    <p class="text-slate-400">Contamos con sistemas expertos para la gestión de **Restaurantes** y administración de **Citas Médicas**. Optimiza tu operación desde hoy.</p>
-                </div>
-                <div class="mt-8 md:mt-0">
-                    <a href="https://wa.me/593979267019" class="bg-emerald-600 hover:bg-emerald-700 px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-emerald-500/20 inline-block">Solicitar Demo</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer id="contacto" class="bg-slate-900 text-slate-400 py-16">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center items-center space-x-2 mb-8">
                 <img src="logo.png" alt="Logo" class="h-10">
                 <span class="text-2xl font-bold text-white tracking-tight">Digital Clover</span>
             </div>
-            <div class="flex justify-center space-x-6 mb-8 text-xl">
-                <a href="#" class="hover:text-emerald-500 transition"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="hover:text-emerald-500 transition"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/593979267019" class="hover:text-emerald-500 transition"><i class="fab fa-whatsapp"></i></a>
-            </div>
             <p class="text-sm">© 2026 Digital Clover | Cuenca, Ecuador. Transformación Digital para tu empresa.</p>
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/593979267019" 
        target="_blank" 
        class="fixed bottom-6 right-6 bg-[#25d366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform z-[100]"
